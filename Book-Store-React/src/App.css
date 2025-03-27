@@ -1,42 +1,78 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.App {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.book-list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+    justify-content: center;
+    margin-bottom: 3rem;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.book-card {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 5rem 2rem 1fr 4rem;
+    row-gap: 2rem;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 2px 2px 6px #aaa;
+    width: 18rem;
+    height: auto;
+
+    h2 {
+        grid-row: 1;
+        
+    }
+
+    h4 {
+        grid-row: 2;
+    }
+
+    p {
+        grid-row: 3;
+    }
+
+    button {
+        grid-row: 4;
+        background-color: rgb(118, 117, 117);
+        border: none;
+        border-radius: 50px;
+    }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+header {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    margin-top: 3rem;
+
+    .page-title {
+        grid-column: 2;
+        text-align: center;
+    }
+
+    .cart {
+        grid-column: 3;
+        justify-self: end;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        font-size: 1.3rem;
+    }
 }
 
-.card {
-  padding: 2em;
+.in-cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    border-radius: 50%;
+    height: 2.5rem;
+    width: 2.5rem;
 }
 
-.read-the-docs {
-  color: #888;
-}
