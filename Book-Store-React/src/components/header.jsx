@@ -1,15 +1,18 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBookOpen } from '@fortawesome/free-solid-svg-icons';
 
-function Header () {
+function Header({ cartCounts }) {
     return (
-    <header>
-        <h1 className='page-title'>My Book Collection</h1>
-        <section className='cart'>
-            <h2 className='cart-title'>Cart</h2>
-            <section className='in-cart'>0</section>
-        </section>
-    </header>
+        <header>
+            <section className='icon'><FontAwesomeIcon icon={faBookOpen} /></section>
+                <button className="log-out">Logga ut</button>
+                <section className='cart'>
+                <h2 className='cart-title'>Cart</h2>
+                <span className='in-cart'>{cartCounts}</span>
+            </section>
+        </header>
     );
-};
+}
 
 export default Header;

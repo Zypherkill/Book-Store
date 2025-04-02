@@ -1,12 +1,17 @@
-import books from '../books.json';
+import React from 'react';
+import Counter from './counter';
 
-function BookItem({ book }) {
+function BookItem({ count, book, increaseCartCount, decreaseCartCount }) {
     return (
         <>
-        <h2>{book.title}</h2>
-        <h4>{book.author}</h4>
-        <p>{book.desc}</p>
-        <button>Lägg till i kundvagn</button>
+            <h2>{book.title}</h2>
+            <h4>Författare: {book.author}</h4>
+            <p>{book.desc}</p>
+            <Counter 
+                count={count}
+                increaseCount={increaseCartCount} 
+                decreaseCount={decreaseCartCount} 
+            />
         </>
     );
 }

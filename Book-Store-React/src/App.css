@@ -2,14 +2,17 @@
     display: flex;
     flex-direction: column;
     gap: 3rem;
+    align-items: center;
 }
 
 .book-list {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 16px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    row-gap: 2rem;
     justify-content: center;
     margin-bottom: 3rem;
+    width: 80%;
 }
 
 .book-card {
@@ -17,12 +20,13 @@
     grid-template-columns: 1fr;
     grid-template-rows: 5rem 2rem 1fr 4rem;
     row-gap: 2rem;
-    border: 1px solid #ccc;
     padding: 1rem;
     border-radius: 8px;
-    box-shadow: 2px 2px 6px #aaa;
-    width: 18rem;
+    box-shadow: 2px 2px 6px #060606d0;
+    width: 30rem;
     height: auto;
+    background-color: white;
+    color: black;
 
     h2 {
         grid-row: 1;
@@ -36,21 +40,28 @@
     p {
         grid-row: 3;
     }
-
-    button {
-        grid-row: 4;
-        background-color: rgb(118, 117, 117);
-        border: none;
-        border-radius: 50px;
-    }
 }
 
 header {
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
-    margin-top: 3rem;
+    background-color: rgb(49, 46, 62);
 
+    .icon {
+        display: flex;
+        font-size: 3.5rem;
+        background-color: rgb(255, 255, 255);
+        align-items: center;
+        justify-content: center;
+        grid-column: 1;
+        margin-left: 3rem;
+        width: 6rem;
+        height: 6rem;
+        border-radius: 50%;
+        color: black;
+    }
     .page-title {
         grid-column: 2;
         text-align: center;
@@ -63,6 +74,7 @@ header {
         align-items: center;
         gap: 1rem;
         font-size: 1.3rem;
+        margin-right: 3rem;
     }
 }
 
@@ -74,5 +86,27 @@ header {
     border-radius: 50%;
     height: 2.5rem;
     width: 2.5rem;
+}
+
+.counter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    font-weight: 600;
+    
+    button {
+        width: 12rem;
+        background-color: transparent;
+        color: black;
+    }
+}
+
+.log-out {
+    align-self: center;
+    justify-self: center;
+    padding: 1rem 4rem;
+    background-color: white;
+    color: black;
 }
 
