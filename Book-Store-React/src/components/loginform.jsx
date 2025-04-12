@@ -15,7 +15,7 @@ function LoginForm({ setactiveUser }) {
     };
 
     return (
-        <div className="log-in">
+        <form className="log-in">
             <h2>Logga in</h2>
             <input
                 type="text"
@@ -29,8 +29,8 @@ function LoginForm({ setactiveUser }) {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
             />
-            <button onClick={handleLogin}>Logga in</button>
-        </div>
+            <button type="submit" onClick={handleLogin}>Logga in</button>
+        </form>
     );
 }
 
